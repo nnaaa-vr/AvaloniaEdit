@@ -1635,6 +1635,7 @@ namespace AvaloniaEdit.Rendering
             if (_currentHoveredElement != element)
             {
                 //Cursor = Cursor.Default; ISSUE : Cursor gets set to Default but not back to IBeam
+                ClearValue(CursorProperty);
                 _currentHoveredElement = element;
             }
             element?.OnQueryCursor(e);
