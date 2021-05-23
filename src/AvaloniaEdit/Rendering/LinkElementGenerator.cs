@@ -34,7 +34,7 @@ namespace AvaloniaEdit.Rendering
 	{
 		// a link starts with a protocol (or just with www), followed by 0 or more 'link characters', followed by a link end character
 		// (this allows accepting punctuation inside links but not at the end)
-		internal static readonly Regex DefaultLinkRegex = new Regex(@"\b(https?://|ftp://|www\.)[\w\d\._/\-~%@()+:?&=#!]*[\w\d/]");
+		internal static readonly Regex DefaultLinkRegex = new Regex(@"\b(https?://|ftp://|www\.)[\w\d\._/\-~%@()+:?&=#!]*[\w\d/]\)*");
 		
 		// try to detect email addresses
 		internal static readonly Regex DefaultMailRegex = new Regex(@"\b[\w\d\.\-]+\@[\w\d\.\-]+\.[a-z]{2,6}\b");
